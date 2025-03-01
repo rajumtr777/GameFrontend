@@ -4,8 +4,8 @@ import PropTypes from "prop-types";
 const UsernameScreen = ({ username, setUsername, setGameStarted }) => {
   const handleStartGame = () => {
     if (!username.trim()) {
-        console.log("alert");
       alert("⚠️ Please enter a username!");
+      return;
     }
     setGameStarted(true);
   };
