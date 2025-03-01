@@ -13,7 +13,7 @@ const useGameLogic = () => {
   const [gameStarted, setGameStarted] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/questions")
+    fetch("https://gamebe-production.up.railway.app/api/questions")
       .then((res) => res.json())
       .then((data) => {
         setQuestions(data.sort(() => Math.random() - 0.5));

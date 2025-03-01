@@ -2,6 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const UsernameScreen = ({ username, setUsername, setGameStarted }) => {
+  const handleStartGame = () => {
+    if (!username.trim()) {
+        console.log("alert");
+      alert("⚠️ Please enter a username!");
+    }
+    setGameStarted(true);
+  };
+
   return (
     <div className="username-container">
       <h2>Enter your username</h2>
@@ -11,7 +19,10 @@ const UsernameScreen = ({ username, setUsername, setGameStarted }) => {
         onChange={(e) => setUsername(e.target.value)} 
         placeholder="Your name" 
       />
-      <button className="startButton" onClick={() => setGameStarted(true)}>
+      <button 
+        className="startButton" 
+        onClick={handleStartGame} 
+      >
         Start Game
       </button>
     </div>
