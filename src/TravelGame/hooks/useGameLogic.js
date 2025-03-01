@@ -54,8 +54,7 @@ const useGameLogic = () => {
   };
 
   const handleChallengeFriend = () => {
-    const inviteLink = `${window.location.origin}/invite?user=${username}&score=${score}`;
-    const whatsappMessage = `I scored ${score} in Globetrotter Challenge! Think you can beat me? Play now: ${inviteLink}`;
+    const whatsappMessage = `I scored ${score} in Globetrotter Challenge! Think you can beat me? Play now`;
     window.open(`https://wa.me/?text=${encodeURIComponent(whatsappMessage)}`, "_blank");
   };
 

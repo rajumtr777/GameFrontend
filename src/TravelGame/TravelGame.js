@@ -6,7 +6,7 @@ import QuestionBox from "./components/QuestionBox";
 import ScoreBoard from "./components/ScoreBoard";
 import "./styles.css";
 
-const App = () => {
+const TravelGame= () => {
   const {
     questions,
     currentIndex,
@@ -52,4 +52,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default TravelGame;
